@@ -1,0 +1,10 @@
+export type CartLine = { productId: string; quantity: number };
+export const CART_STORAGE_KEY: "fieldwork-demo-cart-v1";
+export function incrementCartQuantity(lines: CartLine[], productId: string): CartLine[];
+export function updateCartQuantity(lines: CartLine[], productId: string, quantity: number): CartLine[];
+export function decrementCartQuantity(lines: CartLine[], productId: string): CartLine[];
+export function removeCartProduct(lines: CartLine[], productId: string): CartLine[];
+export function calculateCartSubtotal(items: { product: { id: string; price: number }; quantity: number }[]): number;
+export function readCartLines(storage: Pick<Storage, "getItem">, knownProductIds: Set<string>): CartLine[];
+export function saveCartLines(storage: Pick<Storage, "setItem">, lines: CartLine[]): void;
+export function toCheckoutLines(items: { product: { id: string; price: number; backendId?: number }; quantity: number }[]): { product_id: number; quantity: number }[];

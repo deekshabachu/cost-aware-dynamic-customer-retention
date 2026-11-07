@@ -1,0 +1,16 @@
+# Existing preprocessing and training pipeline (versions verified locally).
+pandas==2.3.2
+numpy==2.3.3
+scikit-learn==1.8.0
+xgboost==3.4.1
+joblib==1.5.3
+openpyxl==3.1.5
+
+# Database layer (version verified after installation for the database tests).
+SQLAlchemy==2.1.5
+
+# FastAPI backend and its local API-test client (versions verified locally).
+fastapi==0.157.0
+uvicorn==0.54.0
+httpx==0.28.1
+
